@@ -239,7 +239,7 @@ const resumeConfig = {
         },
         
         // Your GitHub username (will create link to github.com/USERNAME)
-        github: "simardwtf" // CHANGE THIS TO YOUR GITHUB USERNAME
+        github: "simardwtf" // CHANGE THIS TO YOUR GITHUB USERNAME TO PERMANANTLY REMOVE THE ORIGINAL OWNER "simardwtf"
     }
 };
 
