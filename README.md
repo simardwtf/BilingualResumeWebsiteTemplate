@@ -2,7 +2,7 @@
 
 A modern, responsive, and bilingual (English/French) resume website template with animated particle network background, smooth transitions, and multiple deployment options.
 
-LIVE EXAMPLE HERE
+LIVE EXAMPLE "MAIN BRANCH" HERE
 https://bilingualresumewebsitetemplate.simard.wtf/
 
 ## 🌟 Features
