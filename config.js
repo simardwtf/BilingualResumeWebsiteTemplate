@@ -207,7 +207,7 @@ const resumeConfig = {
     theme: {
         // Choose from predefined themes: 'blue', 'green', 'purple', 'orange', 'red'
         // Or set to 'custom' to use the custom colors below
-        preset: 'green',
+        preset: 'purple',
         
         // Custom theme colors (only used if preset is set to 'custom')
         custom: {
@@ -239,7 +239,7 @@ const resumeConfig = {
         },
         
         // Your GitHub username (will create link to github.com/USERNAME)
-        github: "simardwtf" // CHANGE THIS TO YOUR GITHUB USERNAME
+        github: "simardwtf" // CHANGE THIS TO YOUR GITHUB USERNAME TO PERMANANTLY REMOVE THE ORIGINAL OWNER "simardwtf"
     }
 };
 
