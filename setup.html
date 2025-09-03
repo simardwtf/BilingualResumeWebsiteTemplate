@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Template Setup Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { color: #007bff; }
+        h2 { color: #333; margin-top: 2rem; }
+        .step {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #007bff;
+        }
+        code {
+            background: #e9ecef;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+        }
+        .important {
+            background: #fff3cd;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+        ul li { margin: 0.5rem 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Bilingual Resume Template Setup</h1>
+        
+        <div class="success">
+            <strong>Congratulations!</strong> You have successfully downloaded the bilingual resume template. 
+            Follow the steps below to customize it with your information.
+        </div>
+
+        <h2>📋 Quick Setup Steps</h2>
+
+        <div class="step">
+            <h3>Step 1: Open the Configuration File</h3>
+            <p>Open <code>config.js</code> in your favorite text editor (VS Code, Sublime Text, etc.)</p>
+        </div>
+
+        <div class="step">  
+            <h3>Step 2: Replace Placeholder Information</h3>
+            <p>Look for all text that starts with <code>YOUR_</code> and replace with your actual information:</p>
+            <ul>
+                <li><code>YOUR_FULL_NAME</code> → Your real name</li>
+                <li><code>your.email@domain.com</code> → Your email address</li>
+                <li><code>YOUR_JOB_TITLE</code> → Your job title/profession</li>
+                <li><code>X+</code> → Your years of experience (e.g., "5+")</li>
+                <li><code>YOUR_PROFESSIONAL_SUMMARY...</code> → Write your professional summary</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>Step 3: Add Your Work Experience</h3>
+            <p>In the <code>workHistory</code> section, replace the example jobs with your actual work experience. 
+            You can add or remove positions by copying the job object format.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 4: Update Skills & Languages</h3>
+            <p>Modify the <code>skills</code> and <code>languages</code> arrays with your actual skills and language proficiencies.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 5: Choose Your Theme</h3>
+            <p>Change the <code>theme.preset</code> value to one of:</p>
+            <ul>
+                <li><code>'blue'</code> - Professional blue (default)</li>
+                <li><code>'green'</code> - Nature-inspired green</li>
+                <li><code>'purple'</code> - Creative purple</li>
+                <li><code>'orange'</code> - Energetic orange</li>
+                <li><code>'red'</code> - Bold red</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>Step 6: Configure Footer</h3>
+            <p>Update the <code>footer.github</code> value with your GitHub username (without the @ symbol)</p>
+        </div>
+
+        <div class="important">
+            <strong>💡 Pro Tip:</strong> Open <code>config.example.js</code> to see a complete example of how a filled-out configuration should look.
+        </div>
+
+        <h2>🌐 Testing Your Changes</h2>
+        <div class="step">
+            <p>Simply open <code>index.html</code> in your web browser to see your resume. 
+            Refresh the page after making changes to <code>config.js</code>.</p>
+        </div>
+
+        <h2>🚀 Ready to Deploy?</h2>
+        <div class="step">
+            <p>Check out the <code>README.md</code> file for detailed deployment instructions for:</p>
+            <ul>
+                <li>CloudFlare Pages (easiest)</li>
+                <li>NGINX servers</li>
+                <li>Apache2 servers</li>
+            </ul>
+        </div>
+
+        <h2>🎨 Customization Options</h2>
+        <ul>
+            <li><strong>Colors:</strong> Change theme or create custom colors</li>
+            <li><strong>Sections:</strong> Remove sections you don't need from <code>index.html</code></li>
+            <li><strong>Animations:</strong> Modify <code>particleNetwork.js</code> for different background effects</li>
+            <li><strong>Styling:</strong> Edit <code>styles.css</code> for custom styling</li>
+        </ul>
+
+        <div class="success">
+            <strong>Need Help?</strong> All template files are well-commented with instructions. 
+            Look for comments starting with <code>//</code> for guidance on customization.
+        </div>
+
+        <p style="text-align: center; margin-top: 2rem; color: #666;">
+            <strong>Happy resume building! 🎉</strong>
+        </p>
+    </div>
+</body>
+</html>

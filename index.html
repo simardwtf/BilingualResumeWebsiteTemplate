@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Loading...</title>
+    <meta name="description" id="page-description" content="Professional resume website template">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Particle Network Canvas Background -->
+    <canvas id="neuralNetworkCanvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="sidebar-nav" id="sidebar">
+        <!-- Language Toggle in Sidebar -->
+        <div class="sidebar-language-toggle">
+            <div class="language-switch">
+                <input type="checkbox" id="sidebar-lang-toggle" class="language-checkbox">
+                <label for="sidebar-lang-toggle" class="language-label">
+                    <span class="language-slider">
+                        <span class="language-option" data-lang="en">EN</span>
+                        <span class="language-option" data-lang="fr">FR</span>
+                    </span>
+                </label>
+            </div>
+        </div>
+        
+        <!-- Contact Button in Sidebar -->
+        <div class="sidebar-contact">
+            <a href="#" id="sidebar-contact-btn" class="contact-button sidebar-contact-btn">
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <span data-key="nav.contact">Contact Me</span>
+            </a>
+        </div>
+        
+        <!-- Navigation Items -->
+        <div class="nav-item"><a href="#summary" data-key="nav.summary">Summary</a></div>
+        <div class="nav-item"><a href="#overview" data-key="nav.overview">Overview</a></div>
+        <div class="nav-item"><a href="#work-history" data-key="nav.workHistory">Work History</a></div>
+        <div class="nav-item"><a href="#skills" data-key="nav.skills">Skills</a></div>
+        <div class="nav-item"><a href="#languages" data-key="nav.languages">Languages</a></div>
+        <div class="nav-item"><a href="#timeline" data-key="nav.timeline">Timeline</a></div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="header-content">
+            <div class="header-info">
+                <h1 class="header-name" id="header-name">Loading...</h1>
+                <p class="header-title" id="header-email">Loading...</p>
+                <p class="header-subtitle" data-key="header.title">Loading...</p>
+                <p class="header-subtitle" data-key="header.experience">Loading...</p>
+            </div>
+            <div class="header-contact">
+                <a href="#" id="header-contact-btn" class="contact-button header-contact-btn">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <span data-key="nav.contact">Contact Me</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Summary Section -->
+        <section id="summary" class="section summary-section">
+            <div class="section-wrapper">
+                <h2 class="section-title" data-key="sections.summary.title">Summary</h2>
+                <div class="content">
+                    <p data-key="sections.summary.content">Loading...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="section overview-section">
+            <div class="section-wrapper">
+                <h2 class="section-title" data-key="sections.overview.title">Overview</h2>
+                <div class="overview-content">
+                    <div class="overview-item">
+                        <div class="number-wrapper">
+                            <div class="number-shadow" id="experience-shadow">X</div>
+                            <div class="number" id="experience-number">X</div>
+                        </div>
+                        <div class="content">
+                            <p data-key="sections.overview.yearsExperience">Years of professional experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work History Section -->
+        <section id="work-history" class="section work-history-section">
+            <div class="section-wrapper">
+                <h2 class="section-title" data-key="sections.workHistory.title">Work History</h2>
+                <div class="work-list" id="work-list">
+                    <!-- Work items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-wrapper">
+                <h2 class="section-title" data-key="sections.skills.title">Skills</h2>
+                <div class="skills-content" id="skills-content">
+                    <!-- Skills will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages Section -->
+        <section id="languages" class="section languages-section">
+            <div class="section-wrapper">
+                <h2 class="section-title" data-key="sections.languages.title">Languages</h2>
+                <div class="languages-content" id="languages-content">
+                    <!-- Language items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="section timeline-section">
+            <div class="section-wrapper">
+                <h2 class="section-title" data-key="sections.timeline.title">Timeline</h2>
+                <div class="timeline-content" id="timeline-content">
+                    <!-- Timeline items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Configurable) -->
+    <footer id="footer" style="margin-left: 15%; padding: 2em; font-size: 1.3rem; color: #666; text-align: center; display: none;">
+        <p><strong></strong> <span id="footer-text">Loading...</span> <span id="github-link"></span></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="languageData.js"></script>
+    <script src="script.js"></script>
+    <script src="particleNetwork.js"></script>
+
+</body>
+</html>
