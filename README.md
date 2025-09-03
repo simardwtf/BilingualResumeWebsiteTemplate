@@ -17,7 +17,7 @@ https://bilingualresumewebsitetemplate.simard.wtf/
 
 ## 🚀 Quick Start
 
-1. **Download/Clone** this template
+1. **Download/Clone/Fork** this template
 2. **Edit** `config.js` with your personal information
 3. **Customize** colors by changing the theme in `config.js`
 4. **Deploy** using one of the methods below
