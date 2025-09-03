@@ -207,7 +207,7 @@ const resumeConfig = {
     theme: {
         // Choose from predefined themes: 'blue', 'green', 'purple', 'orange', 'red'
         // Or set to 'custom' to use the custom colors below
-        preset: 'blue',
+        preset: 'green',
         
         // Custom theme colors (only used if preset is set to 'custom')
         custom: {
