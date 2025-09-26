@@ -1,27 +1,82 @@
 /**
  * Resume Website Template - Main JavaScript
- * Handles language switching, animations, theme application, and dynamic content loading
+ * Handles language switching, animations, theme application, dynamic content loading, and background selection
  */
 
+let currentBackground = null;
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize theme first
+    // Initialize components in order
     initializeTheme();
-    
-    // Initialize other components
     initializePersonalInfo();
     initializeFooter();
     initializeLanguage();
     initializeNavigation();
     initializeAnimations();
+    initializeBackground(); // Initialize selected background
     
     console.log('Resume website template loaded successfully!');
 });
+
+// ============================================================================
+// BACKGROUND MANAGEMENT
+// ============================================================================
+function initializeBackground() {
+    const canvas = document.getElementById('neuralNetworkCanvas');
+    if (!canvas) {
+        console.error('Background canvas not found');
+        return;
+    }
+    
+    const backgroundType = resumeConfig.background?.type || 'particle-network';
+    
+    // Clean up existing background
+    if (currentBackground && currentBackground.destroy) {
+        currentBackground.destroy();
+    }
+    
+    // Initialize selected background
+    switch (backgroundType) {
+        case 'interactive-sky':
+            currentBackground = window.initializeInteractiveSky(
+                canvas, 
+                resumeConfig.background?.interactiveSky || {}
+            );
+            console.log('Interactive sky background initialized');
+            break;
+            
+        case 'particle-network':
+        default:
+            // Use the existing particle network initialization
+            const config = resumeConfig.background?.particleNetwork || {
+                particleCount: window.innerWidth > 768 ? 80 : 50,
+                maxConnectionDistance: 150,
+                cursorInfluenceRadius: window.innerWidth > 768 ? 200 : 150,
+                cursorAttractionStrength: 0.015,
+                particleSpeed: 0.2,
+                particleSize: { min: 2, max: 4 },
+                colors: {
+                    particle: '#4a9eff',
+                    particleAlt: '#ffffff',
+                    connection: 'rgba(74, 158, 255, 0.3)',
+                    connectionActive: 'rgba(74, 158, 255, 0.6)'
+                }
+            };
+            
+            if (window.ParticleNetwork) {
+                currentBackground = new window.ParticleNetwork(canvas, config);
+                console.log('Particle network background initialized');
+            }
+            break;
+    }
+}
 
 // ============================================================================
 // THEME MANAGEMENT
 // ============================================================================
 function initializeTheme() {
     const theme = resumeConfig.theme;
+    const backgroundType = resumeConfig.background?.type || 'particle-network';
     let colors;
     
     if (theme.preset === 'custom') {
@@ -43,10 +98,10 @@ function initializeTheme() {
     }
     
     // Apply theme colors to CSS variables
-    applyTheme(colors);
+    applyTheme(colors, backgroundType);
 }
 
-function applyTheme(colors) {
+function applyTheme(colors, backgroundType) {
     const root = document.documentElement;
     
     root.style.setProperty('--primary-color', colors.primary);
@@ -59,9 +114,13 @@ function applyTheme(colors) {
     root.style.setProperty('--border-color', colors.borderColor);
     root.style.setProperty('--shadow-color', colors.shadowColor);
     
-    // Apply background gradient
-    if (colors.backgroundGradient) {
+    // Only apply background gradient if using particle network
+    // Interactive sky draws its own background
+    if (backgroundType === 'particle-network' && colors.backgroundGradient) {
         document.body.style.background = colors.backgroundGradient;
+    } else if (backgroundType === 'interactive-sky') {
+        // Clear any existing background for sky mode
+        document.body.style.background = 'transparent';
     }
 }
 
