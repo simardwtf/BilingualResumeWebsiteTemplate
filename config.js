@@ -17,7 +17,7 @@ const resumeConfig = {
     // ============================================================================
     background: {
         // Choose background type: 'particle' or 'sky'
-        type: 'sky', // Options: 'particle' (default), 'sky' (3D clouds)
+        type: 'particle', // Options: 'particle' (default), 'sky' (3D clouds)
         
         // Particle Network Configuration (used when type is 'particle')
         particle: {
