@@ -5,12 +5,49 @@
  * 1. Replace all placeholder values with your actual information
  * 2. Modify the work history, skills, and languages arrays as needed
  * 3. Customize colors and theme settings
- * 4. Update the footer information
+ * 4. Choose your background type (particle or sky)
+ * 5. Update the footer information
  * 
  * TIP: Search for "YOUR_" to find all placeholders that need customization
  */
 
 const resumeConfig = {
+    // ============================================================================
+    // BACKGROUND CONFIGURATION
+    // ============================================================================
+    background: {
+        // Choose background type: 'particle' or 'sky'
+        type: 'particle', // Options: 'particle' (default), 'sky' (3D clouds)
+        
+        // Particle Network Configuration (used when type is 'particle')
+        particle: {
+            particleCount: window.innerWidth > 768 ? 80 : 50, // Number of particles
+            maxConnectionDistance: 150,      // Distance for particle connections (pixels)
+            cursorInfluenceRadius: window.innerWidth > 768 ? 200 : 150, // Mouse interaction radius
+            cursorAttractionStrength: 0.015, // Strength of mouse attraction
+            particleSpeed: 0.2,              // Movement speed
+            particleSize: { min: 2, max: 4 }, // Particle size range (pixels)
+            colors: {
+                particle: '#4a9eff',         // Primary particle color
+                particleAlt: '#ffffff',      // Secondary particle color (20% of particles)
+                connection: 'rgba(74, 158, 255, 0.3)', // Connection line color
+                connectionActive: 'rgba(74, 158, 255, 0.6)' // Active connection color (mouse interaction)
+            }
+        },
+        
+        // Sky Background Configuration (used when type is 'sky')
+        // Note: Colors use hexadecimal format WITHOUT the # symbol (e.g., 0x5eb7d9)
+        sky: {
+            skyColor: 0x5eb7d9,        // Main sky color
+            cloudColor: 0xb1c2dc,      // Cloud color
+            cloudShadowColor: 0x1b3a57, // Cloud shadow color
+            sunColor: 0xff9c21,        // Sun color
+            sunGlareColor: 0xfa6331,   // Sun glare color
+            sunlightColor: 0xfa9531,   // Sunlight color
+            speed: 1                   // Animation speed (0.5 = slower, 2 = faster)
+        }
+    },
+
     // ============================================================================
     // PERSONAL INFORMATION
     // ============================================================================
@@ -239,7 +276,7 @@ const resumeConfig = {
         },
         
         // Your GitHub username (will create link to github.com/USERNAME)
-        github: "simardwtf" // CHANGE THIS TO YOUR GITHUB USERNAME TO PERMANANTLY REMOVE THE ORIGINAL OWNER "simardwtf"
+        github: "simardwtf" // CHANGE THIS TO YOUR GITHUB USERNAME TO PERMANENTLY REMOVE THE ORIGINAL OWNER "simardwtf"
     }
 };
 
