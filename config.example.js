@@ -1,11 +1,47 @@
 /**
- * Resume Website Template Configuration - EXAMPLE
+ * Resume Website Template Configuration - COMPLETE EXAMPLE
  * 
- * This is an example of a completed configuration file.
+ * This is an example of a completed configuration file with background options.
  * Copy this to config.js and customize with your information.
  */
 
 const resumeConfig = {
+    // ============================================================================
+    // BACKGROUND CONFIGURATION
+    // ============================================================================
+    background: {
+        // Choose background type: 'particle' or 'sky'
+        type: 'particle', // Change to 'sky' for interactive clouds background
+        
+        // Particle Network Configuration (used when type is 'particle')
+        particle: {
+            particleCount: window.innerWidth > 768 ? 80 : 50,
+            maxConnectionDistance: 150,
+            cursorInfluenceRadius: window.innerWidth > 768 ? 200 : 150,
+            cursorAttractionStrength: 0.015,
+            particleSpeed: 0.2,
+            particleSize: { min: 2, max: 4 },
+            colors: {
+                particle: '#4a9eff',
+                particleAlt: '#ffffff',
+                connection: 'rgba(74, 158, 255, 0.3)',
+                connectionActive: 'rgba(74, 158, 255, 0.6)'
+            }
+        },
+        
+        // Sky Background Configuration (used when type is 'sky')
+        // Note: Colors use hex format WITHOUT # symbol (e.g., 0x5eb7d9)
+        sky: {
+            skyColor: 0x5eb7d9,        // Main sky color
+            cloudColor: 0xb1c2dc,      // Cloud color
+            cloudShadowColor: 0x1b3a57, // Cloud shadow color
+            sunColor: 0xff9c21,        // Sun color
+            sunGlareColor: 0xfa6331,   // Sun glare color
+            sunlightColor: 0xfa9531,   // Sunlight color
+            speed: 1                   // Animation speed (0.5 = slower, 2 = faster)
+        }
+    },
+
     // ============================================================================
     // PERSONAL INFORMATION
     // ============================================================================
@@ -227,6 +263,6 @@ const resumeConfig = {
             en: "This code is free to use, modify, distribute without restriction. No attribution is required. Nothing is obfuscated, and transparency is encouraged!",
             fr: "Ce code est libre d'utilisation, modification, distribution sans restriction. Aucune attribution n'est requise. Rien n'est obfusqué, et la transparence est encouragée!"
         },
-        github: "johndoe" // Replace with your GitHub username
+        github: "johndoe"
     }
 };
