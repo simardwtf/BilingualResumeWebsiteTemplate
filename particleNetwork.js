@@ -10,17 +10,17 @@ class ParticleNetwork {
         
         // Configuration with modern particle network defaults
         this.config = {
-            particleCount: window.innerWidth > 768 ? 80 : 50, // 50-100 particles based on screen size
-            maxConnectionDistance: 150, // Lines appear when particles within 150px
-            cursorInfluenceRadius: window.innerWidth > 768 ? 200 : 150, // Mouse interaction radius
-            cursorAttractionStrength: 0.015, // Gentle attraction to cursor
-            particleSpeed: 0.2, // Slow, smooth movement
-            particleSize: { min: 2, max: 4 }, // 2-4px diameter particles
+            particleCount: window.innerWidth > 768 ? 80 : 50,
+            maxConnectionDistance: 150,
+            cursorInfluenceRadius: window.innerWidth > 768 ? 200 : 150,
+            cursorAttractionStrength: 0.015,
+            particleSpeed: 0.2,
+            particleSize: { min: 2, max: 4 },
             colors: {
-                particle: '#4a9eff', // Blue/cyan particles
-                particleAlt: '#ffffff', // Alternative white particles
-                connection: 'rgba(74, 158, 255, 0.3)', // Semi-transparent blue connections
-                connectionActive: 'rgba(74, 158, 255, 0.6)' // Active connections with cursor interaction
+                particle: '#4a9eff',
+                particleAlt: '#ffffff',
+                connection: 'rgba(74, 158, 255, 0.3)',
+                connectionActive: 'rgba(74, 158, 255, 0.6)'
             },
             ...config
         };
@@ -123,7 +123,7 @@ class ParticleNetwork {
     }
     
     render() {
-        // Clear canvas with slight fade for smoother trails
+        // Clear canvas
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         
         // Draw connections first (behind particles)
@@ -165,13 +165,13 @@ class Particle {
         this.vx = (Math.random() - 0.5) * config.particleSpeed;
         this.vy = (Math.random() - 0.5) * config.particleSpeed;
         this.config = config;
-        this.activity = 0; // 0 to 1, how active this particle is (cursor interaction)
+        this.activity = 0;
         this.size = Math.random() * (config.particleSize.max - config.particleSize.min) + config.particleSize.min;
         this.baseSize = this.size;
         this.targetSize = this.size;
         this.opacity = 0.8;
         this.targetOpacity = 0.8;
-        this.useAltColor = Math.random() < 0.2; // 20% chance for white particles
+        this.useAltColor = Math.random() < 0.2;
     }
     
     update(cursor, canvas) {
@@ -268,7 +268,7 @@ class Particle {
             const b = parseInt(hex.slice(5, 7), 16);
             return `rgba(${r}, ${g}, ${b}, ${alpha})`;
         }
-        return hex; // Return as-is if already rgba/rgb
+        return hex;
     }
 }
 
@@ -278,8 +278,8 @@ class Connection {
         this.particle2 = particle2;
         this.distance = distance;
         this.config = config;
-        this.strength = 0; // 0 to 1, affects opacity and interaction
-        this.baseOpacity = 1 - (distance / config.maxConnectionDistance); // Fade based on distance
+        this.strength = 0;
+        this.baseOpacity = 1 - (distance / config.maxConnectionDistance);
     }
     
     updateStrength(cursor) {
@@ -307,7 +307,7 @@ class Connection {
     }
     
     draw(ctx) {
-        if (this.baseOpacity <= 0.1) return; // Don't draw very faint connections
+        if (this.baseOpacity <= 0.1) return;
         
         // Calculate final opacity with smooth fade in/out
         const finalOpacity = this.baseOpacity * 0.3 + (this.strength * 0.3);
@@ -323,7 +323,7 @@ class Connection {
         ctx.beginPath();
         ctx.moveTo(this.particle1.x, this.particle1.y);
         ctx.lineTo(this.particle2.x, this.particle2.y);
-        ctx.lineWidth = 1 + (this.strength * 0.5); // Slightly thicker lines on interaction
+        ctx.lineWidth = 1 + (this.strength * 0.5);
         ctx.strokeStyle = strokeStyle;
         ctx.stroke();
     }
@@ -332,23 +332,49 @@ class Connection {
 // Initialize particle network when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     const canvas = document.getElementById('neuralNetworkCanvas');
-    if (canvas) {
-        // Configuration optimized for modern particle network
-        const config = {
-            particleCount: window.innerWidth > 768 ? 80 : 50, // Responsive particle count
-            maxConnectionDistance: 150, // Connection distance as specified
-            cursorInfluenceRadius: window.innerWidth > 768 ? 200 : 150, // Mouse interaction range
-            cursorAttractionStrength: 0.015, // Gentle cursor attraction
-            particleSpeed: 0.2, // Slow, smooth movement
-            particleSize: { min: 2, max: 4 }, // 2-4px diameter range
+    
+    if (canvas && canvas.style.display !== 'none') {
+        console.log('Initializing particle network...');
+        
+        // FORCE canvas to full size IMMEDIATELY
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
+        
+        console.log('Canvas dimensions set to:', canvas.width, 'x', canvas.height);
+        
+        // Get config from resumeConfig or use defaults
+        const config = resumeConfig.background?.particle || {
+            particleCount: window.innerWidth > 768 ? 80 : 50,
+            maxConnectionDistance: 150,
+            cursorInfluenceRadius: window.innerWidth > 768 ? 200 : 150,
+            cursorAttractionStrength: 0.015,
+            particleSpeed: 0.2,
+            particleSize: { min: 2, max: 4 },
             colors: {
-                particle: '#4a9eff', // Primary blue/cyan particles
-                particleAlt: '#ffffff', // Secondary white particles
-                connection: 'rgba(74, 158, 255, 0.3)', // Semi-transparent connections
-                connectionActive: 'rgba(74, 158, 255, 0.6)' // Active connections
+                particle: '#4a9eff',
+                particleAlt: '#ffffff',
+                connection: 'rgba(74, 158, 255, 0.3)',
+                connectionActive: 'rgba(74, 158, 255, 0.6)'
             }
         };
         
+        console.log('Creating particle network with config:', config);
+        
         window.particleNetwork = new ParticleNetwork(canvas, config);
+        
+        console.log('Particle network initialized successfully!');
+        console.log('Number of particles:', window.particleNetwork.particles.length);
+        
+        // Force an immediate render to make sure it's visible
+        setTimeout(() => {
+            if (window.particleNetwork) {
+                window.particleNetwork.render();
+                console.log('Initial render complete');
+            }
+        }, 100);
+    } else {
+        console.log('Canvas not found or hidden');
     }
 });
