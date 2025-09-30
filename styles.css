@@ -896,20 +896,4 @@ body.sky-background::after {
     background: rgba(255, 255, 255, 0.5);
 }
 
-/* Only apply overlay when sky background is active */
-body.sky-background::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-    pointer-events: none;
-}
 
-/* Make sure it doesn't apply to particle background */
-body.particle-background::after {
-    display: none !important;
-}
