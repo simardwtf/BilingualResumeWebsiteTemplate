@@ -226,6 +226,67 @@ const resumeConfig = {
     },
 
     // ============================================================================
+    // BACKGROUND CONFIGURATION
+    // ============================================================================
+    background: {
+        /**
+         * Choose your interactive background effect
+         *
+         * Available options:
+         * - 'particleNetwork' - Custom particle network with mouse interaction (default)
+         * - 'vanta-clouds' - Vanta.js clouds effect (airplane window style)
+         * - 'vanta-clouds2' - Vanta.js denser dramatic clouds
+         * - 'vanta-waves' - Vanta.js animated waves
+         * - 'vanta-fog' - Vanta.js fog/mist effect
+         * - 'vanta-birds' - Vanta.js animated bird flock
+         * - 'vanta-net' - Vanta.js network mesh
+         * - 'vanta-cells' - Vanta.js floating cells
+         * - 'vanta-trunk' - Vanta.js branching structure
+         * - 'vanta-topology' - Vanta.js 3D topographical effect
+         * - 'vanta-dots' - Vanta.js dot grid
+         * - 'vanta-rings' - Vanta.js concentric rings
+         * - 'vanta-globe' - Vanta.js rotating globe
+         * - 'vanta-halo' - Vanta.js halo glow effect
+         * - 'none' - No background effect
+         */
+        type: 'vanta-clouds',
+
+        /**
+         * Background-specific options
+         * Each background type has its own customization options
+         * Leave empty {} for defaults, or customize as needed
+         *
+         * Examples:
+         *
+         * For vanta-clouds:
+         * options: {
+         *     skyColor: 0x68b8d7,      // Sky color (hex without #)
+         *     cloudColor: 0xadc1de,    // Cloud color
+         *     speed: 1.2               // Animation speed
+         * }
+         *
+         * For particleNetwork:
+         * options: {
+         *     particleCount: 80,
+         *     colors: {
+         *         particle: '#4a9eff',
+         *         connection: 'rgba(74, 158, 255, 0.3)'
+         *     }
+         * }
+         *
+         * For vanta-waves:
+         * options: {
+         *     color: 0x1f4f7,          // Wave color
+         *     waveHeight: 15.00,       // Wave amplitude
+         *     waveSpeed: 0.75          // Animation speed
+         * }
+         */
+        options: {
+            // Add your custom options here
+        }
+    },
+
+    // ============================================================================
     // FOOTER CONFIGURATION
     // ============================================================================
     footer: {
