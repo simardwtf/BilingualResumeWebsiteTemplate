@@ -9,9 +9,15 @@ class BackgroundManager {
         this.currentBackground = null;
         this.currentEffect = null;
         this.canvas = document.getElementById('neuralNetworkCanvas');
+        this.vantaContainer = document.getElementById('vantaBackground');
 
         if (!this.canvas) {
             console.error('Background canvas not found');
+            return;
+        }
+
+        if (!this.vantaContainer) {
+            console.error('Vanta background container not found');
             return;
         }
 
@@ -81,11 +87,24 @@ class BackgroundManager {
         this.currentBackground = type;
     }
 
+    showCanvas() {
+        this.canvas.style.display = 'block';
+        this.vantaContainer.style.display = 'none';
+    }
+
+    showVantaContainer() {
+        this.canvas.style.display = 'none';
+        this.vantaContainer.style.display = 'block';
+    }
+
     loadParticleNetwork(options = {}) {
         if (typeof ParticleNetwork === 'undefined') {
             console.error('ParticleNetwork class not found. Make sure particleNetwork.js is loaded.');
             return;
         }
+
+        // Show canvas, hide Vanta container
+        this.showCanvas();
 
         const config = {
             particleCount: window.innerWidth > 768 ? 80 : 50,
@@ -113,8 +132,11 @@ class BackgroundManager {
             return;
         }
 
+        // Show Vanta container, hide canvas
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.CLOUDS({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -137,8 +159,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.CLOUDS2({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -158,8 +182,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.WAVES({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -182,8 +208,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.FOG({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -206,8 +234,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.BIRDS({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -236,8 +266,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.NET({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -261,8 +293,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.CELLS({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -283,8 +317,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.TRUNK({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -306,8 +342,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.TOPOLOGY({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -327,8 +365,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.DOTS({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -352,8 +392,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.RINGS({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -373,8 +415,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.GLOBE({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -396,8 +440,10 @@ class BackgroundManager {
             return;
         }
 
+        this.showVantaContainer();
+
         this.currentEffect = VANTA.HALO({
-            el: this.canvas,
+            el: this.vantaContainer,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,

@@ -30,7 +30,8 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Particle canvas background */
+/* Background containers */
+#vantaBackground,
 #neuralNetworkCanvas {
     position: fixed;
     top: 0;
@@ -39,6 +40,14 @@ html {
     height: 100%;
     z-index: 0;
     pointer-events: none;
+}
+
+#vantaBackground {
+    display: none; /* Hidden by default, shown by backgroundManager when using Vanta effects */
+}
+
+#neuralNetworkCanvas {
+    display: block; /* Shown by default for particle network */
 }
 
 /* Header Section */
