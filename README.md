@@ -11,6 +11,8 @@ https://bilingualresumewebsitetemplate.simard.wtf/
 - **Interactive Backgrounds**: Choose from 14+ different animated backgrounds including:
   - Custom particle network with mouse interaction
   - Vanta.js effects (clouds, waves, fog, birds, and more)
+  - Automatic text overlay for readability on any background
+- **Fully Self-Contained**: All libraries stored locally (no CDN dependencies)
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile
 - **Multiple Themes**: 5 predefined color themes + custom theme support
 - **Modern Animations**: Smooth scrolling, fade-ins, and hover effects
@@ -92,6 +94,11 @@ footer: {
 ## 🌌 Interactive Backgrounds
 
 Choose from multiple animated background effects in `config.js`:
+
+**Key Features:**
+- ✅ **Automatic Text Readability**: Semi-transparent overlay ensures text is always readable
+- ✅ **Local Libraries**: All dependencies stored locally for offline reliability
+- ✅ **No External Dependencies**: Works without internet connection
 
 ### Available Background Effects
 
