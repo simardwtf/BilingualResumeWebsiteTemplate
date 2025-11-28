@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Background Container for Vanta.js effects -->
+    <div id="vantaBackground"></div>
+
     <!-- Particle Network Canvas Background -->
     <canvas id="neuralNetworkCanvas"></canvas>
-    
+
     <!-- Navigation -->
     <nav class="sidebar-nav" id="sidebar">
         <!-- Language Toggle in Sidebar -->
@@ -144,10 +147,33 @@
     </footer>
 
     <!-- Scripts -->
+    <!-- Three.js - Required for most Vanta.js effects (local) -->
+    <script src="lib/three/three.min.js"></script>
+
+    <!-- p5.js - Required for some Vanta.js effects (trunk) (local) -->
+    <script src="lib/p5/p5.min.js"></script>
+
+    <!-- Vanta.js Effects - All stored locally for reliability -->
+    <script src="lib/vanta/vanta.waves.min.js"></script>
+    <script src="lib/vanta/vanta.clouds.min.js"></script>
+    <script src="lib/vanta/vanta.clouds2.min.js"></script>
+    <script src="lib/vanta/vanta.fog.min.js"></script>
+    <script src="lib/vanta/vanta.birds.min.js"></script>
+    <script src="lib/vanta/vanta.net.min.js"></script>
+    <script src="lib/vanta/vanta.cells.min.js"></script>
+    <script src="lib/vanta/vanta.trunk.min.js"></script>
+    <script src="lib/vanta/vanta.topology.min.js"></script>
+    <script src="lib/vanta/vanta.dots.min.js"></script>
+    <script src="lib/vanta/vanta.rings.min.js"></script>
+    <script src="lib/vanta/vanta.globe.min.js"></script>
+    <script src="lib/vanta/vanta.halo.min.js"></script>
+
+    <!-- Configuration and custom scripts -->
     <script src="config.js"></script>
     <script src="languageData.js"></script>
     <script src="script.js"></script>
     <script src="particleNetwork.js"></script>
+    <script src="backgroundManager.js"></script>
 
 </body>
 </html>

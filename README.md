@@ -8,7 +8,11 @@ https://bilingualresumewebsitetemplate.simard.wtf/
 ## 🌟 Features
 
 - **Bilingual Support**: Complete English and French translations
-- **Animated Background**: Interactive particle network with mouse interaction
+- **Interactive Backgrounds**: Choose from 14+ different animated backgrounds including:
+  - Custom particle network with mouse interaction
+  - Vanta.js effects (clouds, waves, fog, birds, and more)
+  - Automatic text overlay for readability on any background
+- **Fully Self-Contained**: All libraries stored locally (no CDN dependencies)
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile
 - **Multiple Themes**: 5 predefined color themes + custom theme support
 - **Modern Animations**: Smooth scrolling, fade-ins, and hover effects
@@ -86,6 +90,83 @@ footer: {
 - **Orange**: Energetic orange and yellow
 - **Red**: Bold red and orange
 - **Custom**: Define your own colors
+
+## 🌌 Interactive Backgrounds
+
+Choose from multiple animated background effects in `config.js`:
+
+**Key Features:**
+- ✅ **Automatic Text Readability**: Semi-transparent overlay ensures text is always readable
+- ✅ **Local Libraries**: All dependencies stored locally for offline reliability
+- ✅ **No External Dependencies**: Works without internet connection
+
+### Available Background Effects
+
+1. **particleNetwork** - Custom particle network with mouse interaction (original)
+2. **vanta-clouds** - Airplane window-style clouds
+3. **vanta-clouds2** - Denser, more dramatic clouds
+4. **vanta-waves** - Animated liquid waves
+5. **vanta-fog** - Misty fog effect
+6. **vanta-birds** - Animated bird flock
+7. **vanta-net** - Interactive network mesh
+8. **vanta-cells** - Floating cellular structures
+9. **vanta-trunk** - Branching tree-like structure
+10. **vanta-topology** - 3D topographical landscape
+11. **vanta-dots** - Pulsing dot grid
+12. **vanta-rings** - Concentric ripple rings
+13. **vanta-globe** - Rotating wireframe globe
+14. **vanta-halo** - Glowing halo effect
+15. **none** - No background effect
+
+### Background Configuration
+```javascript
+background: {
+    type: 'vanta-clouds',  // Choose any background from the list above
+    options: {
+        // Customize each background with specific options
+        // For vanta-clouds:
+        skyColor: 0x68b8d7,      // Sky color (hex without #)
+        cloudColor: 0xadc1de,    // Cloud color
+        speed: 1.2               // Animation speed
+    }
+}
+```
+
+### Examples
+
+**Particle Network with Custom Colors:**
+```javascript
+background: {
+    type: 'particleNetwork',
+    options: {
+        particleCount: 100,
+        colors: {
+            particle: '#ff00ff',
+            connection: 'rgba(255, 0, 255, 0.3)'
+        }
+    }
+}
+```
+
+**Vanta Waves:**
+```javascript
+background: {
+    type: 'vanta-waves',
+    options: {
+        color: 0x1f4f7,
+        waveHeight: 20.00,
+        waveSpeed: 1.0
+    }
+}
+```
+
+**No Background:**
+```javascript
+background: {
+    type: 'none',
+    options: {}
+}
+```
 
 ## 📦 Deployment Options
 

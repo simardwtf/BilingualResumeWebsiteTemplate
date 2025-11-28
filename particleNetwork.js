@@ -329,26 +329,5 @@ class Connection {
     }
 }
 
-// Initialize particle network when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    const canvas = document.getElementById('neuralNetworkCanvas');
-    if (canvas) {
-        // Configuration optimized for modern particle network
-        const config = {
-            particleCount: window.innerWidth > 768 ? 80 : 50, // Responsive particle count
-            maxConnectionDistance: 150, // Connection distance as specified
-            cursorInfluenceRadius: window.innerWidth > 768 ? 200 : 150, // Mouse interaction range
-            cursorAttractionStrength: 0.015, // Gentle cursor attraction
-            particleSpeed: 0.2, // Slow, smooth movement
-            particleSize: { min: 2, max: 4 }, // 2-4px diameter range
-            colors: {
-                particle: '#4a9eff', // Primary blue/cyan particles
-                particleAlt: '#ffffff', // Secondary white particles
-                connection: 'rgba(74, 158, 255, 0.3)', // Semi-transparent connections
-                connectionActive: 'rgba(74, 158, 255, 0.6)' // Active connections
-            }
-        };
-        
-        window.particleNetwork = new ParticleNetwork(canvas, config);
-    }
-});
+// Note: ParticleNetwork is now initialized by backgroundManager.js
+// This allows for easy switching between different background effects
