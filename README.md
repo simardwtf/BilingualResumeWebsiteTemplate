@@ -5,7 +5,7 @@ A modern, responsive, and bilingual (English/French) resume website template wit
 LIVE EXAMPLE "MAIN BRANCH" HERE
 https://bilingualresumewebsitetemplate.simard.wtf/
 
-## 🌟 Features
+Features
 
 - **Bilingual Support**: Complete English and French translations
 - **Interactive Backgrounds**: Choose from 14+ different animated backgrounds including:
@@ -19,14 +19,14 @@ https://bilingualresumewebsitetemplate.simard.wtf/
 - **Easy Customization**: Single configuration file for all personal data
 - **Multiple Deployment Options**: CloudFlare Pages, NGINX, Apache2
 
-## 🚀 Quick Start
+Quick Start
 
 1. **Download/Clone/Fork** this template
 2. **Edit** `config.js` with your personal information
 3. **Customize** colors by changing the theme in `config.js`
 4. **Deploy** using one of the methods below
 
-## ⚙️ Configuration
+Configuration
 
 All personal data is stored in `config.js`. Simply replace the placeholder values with your information:
 
@@ -74,7 +74,7 @@ theme: {
 }
 ```
 
-## 🎨 Available Themes
+Available Themes
 
 - **Blue** (default): Professional blue with tech vibes
 - **Green**: Nature-inspired green theme
@@ -83,14 +83,14 @@ theme: {
 - **Red**: Bold red and orange
 - **Custom**: Define your own colors
 
-## 🌌 Interactive Backgrounds
+Interactive Backgrounds
 
 Choose from multiple animated background effects in `config.js`:
 
 **Key Features:**
-- ✅ **Automatic Text Readability**: Semi-transparent overlay ensures text is always readable
-- ✅ **Local Libraries**: All dependencies stored locally for offline reliability
-- ✅ **No External Dependencies**: Works without internet connection
+-  **Automatic Text Readability**: Semi-transparent overlay ensures text is always readable
+-  **Local Libraries**: All dependencies stored locally for offline reliability
+-  **No External Dependencies**: Works without internet connection
 
 ### Available Background Effects
 
@@ -160,7 +160,7 @@ background: {
 }
 ```
 
-## 📦 Deployment Options
+Deployment Options
 
 ### Option 1: CloudFlare Pages
 
@@ -385,7 +385,7 @@ sudo setsebool -P httpd_can_network_connect 1
 sudo chcon -R -t httpd_exec_t /var/www/your-resume-site
 ```
 
-## 🔧 Customization Tips
+Customization Tips
 
 ### Adding More Work Experience
 Simply add more objects to the `workHistory.en` and `workHistory.fr` arrays in `config.js`.
@@ -399,28 +399,28 @@ Modify the CSS animations in `styles.css` or adjust the particle network setting
 ### Custom Domain
 For custom domains, update your DNS settings to point to your server's IP address or CloudFlare Pages custom domain settings.
 
-## 📱 Browser Support
+Browser Support
 
 - Chrome/Edge/Safari: Full support
 - Firefox: Full support
 - Mobile browsers: Full support with responsive design
 - IE11: Not supported (uses modern JavaScript features)
 
-## 🎯 Performance
+Performance
 
 - **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
 - **Load Time**: < 2 seconds on fast 3G
 - **Bundle Size**: < 50KB total (HTML, CSS, JS)
 - **Mobile Optimized**: Touch-friendly interactions and responsive layout
 
-## 📄 License
+License
 
 **No Rights Reserved.** This code is free to use, modify, and distribute without restriction. No attribution is required. Transparency is encouraged!
 
-## 🤝 Contributing
+Contributing
 
 Feel free to submit issues, feature requests, or pull requests to improve this template.
 
-## 📞 Support
+Support
 
 If you need help customizing this template or have questions about deployment, feel free to open an issue on GitHub.
