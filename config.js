@@ -248,7 +248,7 @@ const resumeConfig = {
          * - 'vanta-halo' - Vanta.js halo glow effect
          * - 'none' - No background effect
          */
-        type: 'vanta-clouds',
+        type: 'particleNetwork',
 
         /**
          * Background-specific options
