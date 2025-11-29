@@ -74,14 +74,6 @@ theme: {
 }
 ```
 
-### Footer Configuration
-```javascript
-footer: {
-    show: true,                               // Show/hide footer
-    github: "your-github-username"            // Your GitHub username
-}
-```
-
 ## 🎨 Available Themes
 
 - **Blue** (default): Professional blue with tech vibes
