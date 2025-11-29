@@ -1,6 +1,9 @@
 /**
  * Interactive Background Manager
  * Manages different background effects including Particle Network and Vanta.js effects
+ *
+ * Uses Vanta.js by Teng Bao - https://github.com/tengbao/vanta
+ * Vanta.js is licensed under the MIT License
  */
 
 class BackgroundManager {

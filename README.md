@@ -415,6 +415,14 @@ Performance
 - **Bundle Size**: < 50KB total (HTML, CSS, JS)
 - **Mobile Optimized**: Touch-friendly interactions and responsive layout
 
+Credits
+
+This template uses the following open-source libraries:
+
+- **[Vanta.js](https://github.com/tengbao/vanta)** - Animated 3D backgrounds by Teng Bao (MIT License)
+  - Provides the beautiful interactive background effects (clouds, waves, fog, birds, etc.)
+  - Requires Three.js and p5.js dependencies (included locally)
+
 License
 
 **No Rights Reserved.** This code is free to use, modify, and distribute without restriction. No attribution is required. Transparency is encouraged!
