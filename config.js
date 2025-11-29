@@ -1,12 +1,11 @@
 /**
  * Resume Website Template Configuration
- * 
+ *
  * INSTRUCTIONS:
  * 1. Replace all placeholder values with your actual information
  * 2. Modify the work history, skills, and languages arrays as needed
- * 3. Customize colors and theme settings
- * 4. Update the footer information
- * 
+ * 3. Customize colors, themes, and background settings
+ *
  * TIP: Search for "YOUR_" to find all placeholders that need customization
  */
 
@@ -284,23 +283,6 @@ const resumeConfig = {
         options: {
             // Add your custom options here
         }
-    },
-
-    // ============================================================================
-    // FOOTER CONFIGURATION
-    // ============================================================================
-    footer: {
-        // Set to true to show the footer, false to hide it
-        show: true,
-        
-        // Footer text - you can customize this message
-        text: {
-            en: "No Rights Reserved. This code is free to use, modify, distribute without restriction. No attribution is required. Nothing is obfuscated, and transparency is encouraged!",
-            fr: "Aucun Droit Réservé. Ce code est libre d'utilisation, modification, distribution sans restriction. Aucune attribution n'est requise. Rien n'est obfusqué, et la transparence est encouragée!"
-        },
-        
-        // Your GitHub username (will create link to github.com/USERNAME)
-        github: "simardwtf" // CHANGE THIS TO YOUR GITHUB USERNAME TO PERMANANTLY REMOVE THE ORIGINAL OWNER "simardwtf"
     }
 };
 

@@ -95,27 +95,17 @@ function initializePersonalInfo() {
 }
 
 // ============================================================================
-// FOOTER CONFIGURATION 
+// FOOTER CONFIGURATION
 // ============================================================================
 function initializeFooter() {
-    const footerConfig = resumeConfig.footer;
     const footer = document.getElementById('footer');
-    
-    if (footerConfig.show) {
-        footer.style.display = 'block';
-        
-        // Set default language (will be updated by language switcher)
-        const footerText = document.getElementById('footer-text');
-        const githubLink = document.getElementById('github-link');
-        
-        footerText.textContent = footerConfig.text.en;
-        
-        if (footerConfig.github) {
-            githubLink.innerHTML = `<a href="https://github.com/${footerConfig.github}" target="_blank" style="color: #007bff; text-decoration: none;">"github.com/${footerConfig.github}"</a>`;
-        }
-    } else {
-        footer.style.display = 'none';
-    }
+    footer.style.display = 'block';
+
+    const footerText = document.getElementById('footer-text');
+    const githubLink = document.getElementById('github-link');
+
+    footerText.textContent = "No Rights Reserved. This code is free to use, modify, distribute without restriction. No attribution is required. Nothing is obfuscated, and transparency is encouraged!";
+    githubLink.innerHTML = `<a href="https://github.com/simardwtf" target="_blank" style="color: #007bff; text-decoration: none;">"github.com/simardwtf"</a>`;
 }
 
 // ============================================================================
@@ -151,13 +141,15 @@ function updateLanguage(lang) {
     // Update page title
     const config = resumeConfig.personal;
     document.getElementById('page-title').textContent = `${config.name} - ${config.jobTitle[lang]}`;
-    
-    // Update footer text if footer is enabled
-    if (resumeConfig.footer.show) {
-        const footerText = document.getElementById('footer-text');
-        footerText.textContent = resumeConfig.footer.text[lang];
-    }
-    
+
+    // Update footer text based on language
+    const footerText = document.getElementById('footer-text');
+    const footerTexts = {
+        en: "No Rights Reserved. This code is free to use, modify, distribute without restriction. No attribution is required. Nothing is obfuscated, and transparency is encouraged!",
+        fr: "Aucun Droit Réservé. Ce code est libre d'utilisation, modification, distribution sans restriction. Aucune attribution n'est requise. Rien n'est obfusqué, et la transparence est encouragée!"
+    };
+    footerText.textContent = footerTexts[lang];
+
     // Populate dynamic content
     populateWorkHistory(data.sections.workHistory.jobs);
     populateSkills(data.sections.skills.skillsList);
