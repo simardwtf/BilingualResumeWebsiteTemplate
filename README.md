@@ -1,6 +1,6 @@
 # Bilingual Resume Website Template
 
-A modern, responsive, and bilingual (English/French) resume website template with animated particle network background, smooth transitions, and multiple deployment options.
+A modern, responsive, and bilingual (English/French) resume website template with a collection of interactive backgrounds, smooth transitions, and multiple deployment options.
 
 LIVE EXAMPLE "MAIN BRANCH" HERE
 https://bilingualresumewebsitetemplate.simard.wtf/
@@ -85,7 +85,7 @@ Available Themes
 
 Interactive Backgrounds
 
-Choose from multiple animated background effects in `config.js`:
+Choose from multiple animated/interactive background effects in `config.js`:
 
 **Key Features:**
 -  **Automatic Text Readability**: Semi-transparent overlay ensures text is always readable
@@ -176,6 +176,8 @@ Deployment Options
 4. **Deploy**: Click "Save and Deploy"
 
 Your site will be live at `https://your-project-name.pages.dev`
+
+5. **Add a Custom domain**
 
 ### Option 2: NGINX (Debian-based: Ubuntu, Debian)
 
@@ -416,11 +418,3 @@ Performance
 License
 
 **No Rights Reserved.** This code is free to use, modify, and distribute without restriction. No attribution is required. Transparency is encouraged!
-
-Contributing
-
-Feel free to submit issues, feature requests, or pull requests to improve this template.
-
-Support
-
-If you need help customizing this template or have questions about deployment, feel free to open an issue on GitHub.
